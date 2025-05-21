@@ -1,0 +1,9 @@
+services:
+  app:
+    container_name: web-monitor
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - "${PWD}/api/dist:/api"
+      - "${PWD}/app/dist:/usr/share/nginx/html"
